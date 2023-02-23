@@ -123,4 +123,4 @@ class AboutView(TemplateView):
 
 
 
-        return render(request, self.template_name,)
+     return render(request, self.template_name,)
