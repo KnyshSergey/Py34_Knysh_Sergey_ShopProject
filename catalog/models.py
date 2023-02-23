@@ -8,6 +8,9 @@ class Author(models.Model):
     date_of_death = models.DateField(blank=True, null=True)
     photo = models.ImageField(upload_to="authors/", blank=True)
 
+    def get_full_name(self):
+        return f'{self.first_name} {self.last_name}'
+
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
 
@@ -17,9 +20,14 @@ class Author(models.Model):
 
 class Genre(models.Model):
     name = models.CharField(max_length=50)
+    photo = models.ImageField(upload_to="genres/", blank=True)
 
     def __str__(self):
         return self.name
+
+    def get_genre_url(self):
+        return reverse("catalog-genres", args=[self.id])
+
 
 
 

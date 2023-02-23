@@ -5,6 +5,7 @@
 
     <div class="album py-5 bg-light" bis_skin_checked="1">
         <div class="container" bis_skin_checked="1">
+            {% if books %}
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3" bis_skin_checked="1">
             {% for book in books%}
             <div class="col" bis_skin_checked="1">
@@ -30,6 +31,9 @@
             </div>
             {% endfor %}
         </div>
+            {% else %}
+            <h1 class="text-center"> No books available </h1>
+            {% endif %}
       </div>
     </div>
   </main>

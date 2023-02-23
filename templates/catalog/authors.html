@@ -9,7 +9,7 @@
             {% for author in authors%}
             <div class="col" bis_skin_checked="1">
                 <div class="card shadow-sm" bis_skin_checked="1">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <img src="{{ author.photo.url }}" width="100%" height="300px">
                 <div class="card-body" bis_skin_checked="1">
                     <h4 class="card-text">{{author}}</h4>
                     <p class="text">{{author.date_of_birth}} {%if author.date_of_death%} - {{author.date_of_death}}{% endif %}</p>
